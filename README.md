@@ -12,8 +12,6 @@ Sistema full stack de reserva de entradas de cine: una **API en ASP.NET Core** q
 
 > **Proyecto personal de portafolio.** Los usuarios, las reservas y los pagos son ficticios. Ver [Datos y aviso](#datos-y-aviso).
 
-![Panel de administración: dashboard](docs/img/panel-dashboard.png)
-
 ## Qué resuelve
 
 Un cine con varias salas quiere vender entradas desde el celular **sin que un asiento se venda dos veces**, mostrar en tiempo real qué asientos quedan libres y saber cómo van las ventas y la ocupación. El proyecto cubre ese recorrido completo: cartelera, elección de asientos en vivo, reserva con ticket QR, y administración (catálogo, salas, funciones, reservas, usuarios y reportes).
@@ -36,15 +34,20 @@ Un cine con varias salas quiere vender entradas desde el celular **sin que un as
 
 ## Capturas
 
-| Películas | Programar una función |
+<p align="center">
+  <img src="docs/img/cartelera_app_movil.png" alt="App móvil: cartelera con tráiler, calificación y cine cercano" width="300">
+</p>
+<p align="center"><em>App móvil: la cartelera se ve sin iniciar sesión</em></p>
+
+| Panel: películas | Panel: programar una función |
 |---|---|
 | ![Películas](docs/img/panel-peliculas.png) | ![Programar una función](docs/img/panel-funciones.png) |
 
-| Editor de la distribución de una sala (bloqueado: la sala tiene funciones futuras) |
-|---|
-| ![Editor de salas](docs/img/panel-salas.png) |
+![Panel: editor de la distribución de asientos de una sala](docs/img/salas_asientos.png)
 
-> Las capturas son del panel web. La app móvil se describe en [mobile/README.md](mobile/README.md).
+*Editor de la distribución de asientos: con funciones futuras programadas, la distribución queda bloqueada (aviso amarillo).*
+
+> La app móvil se describe en [mobile/README.md](mobile/README.md) y el panel en [web/README.md](web/README.md).
 
 ## Arquitectura
 
