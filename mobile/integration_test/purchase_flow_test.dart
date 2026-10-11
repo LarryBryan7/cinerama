@@ -97,7 +97,7 @@ void main() {
     unawaited(app.main());
     await pumpUntil(tester, find.text(movie['title'] as String), reason: 'la cartelera con la primera película, sin pedir login');
     expect(find.byKey(const Key('login-email')), findsNothing, reason: 'sin sesión se entra directo a la cartelera');
-    expect(find.text('CineFlash⚡'), findsOneWidget);
+    expect(find.text('Cinerama⚡'), findsOneWidget);
     expect(find.byKey(const Key('tab-nowShowing')), findsOneWidget);
 
     // 2. Película → función. Hasta aquí no hace falta cuenta.

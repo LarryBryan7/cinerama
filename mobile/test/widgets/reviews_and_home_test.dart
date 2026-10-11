@@ -343,8 +343,8 @@ void main() {
       await pumpHome(tester);
 
       expect(find.text('Marea Alta'), findsOneWidget);
-      expect(find.text('CineFlash⚡'), findsOneWidget); // la marca de la cabecera no se toca
-      expect(tester.widget<Text>(find.byKey(const Key('header-city'))).data, 'Chimbote'); // solo la ciudad, sin la región
+      expect(find.text('Cinerama⚡'), findsOneWidget);
+      expect(tester.widget<Text>(find.byKey(const Key('header-city'))).data, 'Chimbote, Áncash'); // ciudad y región
       // La ciudad llega después de las películas: la cartelera se vuelve a pedir ya filtrada.
       verify(() => repo.movies(search: '', status: MovieStatus.nowShowing, city: 'Chimbote', page: 1, pageSize: 20)).called(1);
     });
@@ -401,7 +401,7 @@ void main() {
       await tester.tap(find.byKey(const Key('city-Trujillo')));
       await tester.pumpAndSettle();
 
-      expect(tester.widget<Text>(find.byKey(const Key('header-city'))).data, 'Trujillo');
+      expect(tester.widget<Text>(find.byKey(const Key('header-city'))).data, 'Trujillo, La Libertad');
       verify(() => repo.movies(search: '', status: MovieStatus.nowShowing, city: 'Trujillo', page: 1, pageSize: 20)).called(1);
     });
 

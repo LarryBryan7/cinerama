@@ -176,15 +176,15 @@ class _CineHeader extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top),
         child: DesignCanvas(height: 75, children: [
-          Positioned(left: 138, top: 15, width: 121, child: Text('CineFlash⚡', style: cineText(20, FontWeight.w700, CineColors.textTitle), softWrap: false)),
-          Positioned(left: 120, top: 44, child: FigmaIcon(FigmaIconData.mapPin)),
+          Positioned(left: 138, top: 15, width: 121, child: Text('Cinerama⚡', style: cineText(20, FontWeight.w700, CineColors.textTitle), softWrap: false)),
+          Positioned(left: 110, top: 44, child: FigmaIcon(FigmaIconData.mapPin)),
           Positioned(
-            left: 139,
+            left: 129,
             top: 44,
-            width: 122,
+            width: 142, // cabe "Chimbote, Áncash" sin cortarse
             child: BlocBuilder<LocationCubit, LocationState>(
               builder: (context, state) => Text(
-                state.selected?.name ?? 'Elige tu ciudad',
+                state.selected?.label ?? 'Elige tu ciudad',
                 key: const Key('header-city'),
                 style: cineText(14, FontWeight.w300, CineColors.textTab),
                 softWrap: false,
@@ -193,12 +193,12 @@ class _CineHeader extends StatelessWidget {
             ),
           ),
           // El SVG del chevron incluye 0.75 px de margen por el trazo: el vector de Figma está en (263.25, 51.5).
-          Positioned(left: 262.5, top: 50.75, child: FigmaIcon(FigmaIconData.chevronDown)),
+          Positioned(left: 272.5, top: 50.75, child: FigmaIcon(FigmaIconData.chevronDown)),
           // Toda la fila de ubicación es tocable.
           Positioned(
-            left: 110,
+            left: 100,
             top: 36,
-            width: 170,
+            width: 190,
             height: 36,
             child: Semantics(
               button: true,

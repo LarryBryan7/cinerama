@@ -10,8 +10,7 @@ cines con su ubicación, ciudad, pestañas *Cartelera / Preventa / Próximamente
 datos de muestra. El autor decidió completar el backend: **todo lo que muestra la pantalla debe estar en la base de datos** y
 salir de la API, para que las imágenes y los textos reales solo tengan que reemplazar archivos o filas.
 
-Decisiones del autor para esta fase: seguir con el nombre **Cinerama** (la cabecera conserva el título "CineFlash⚡" del
-diseño), cualquier persona con cuenta puede opinar, y en preventa **sí se reservan asientos** antes del estreno.
+Decisiones del autor para esta fase: seguir con el nombre **Cinerama** (la cabecera de la app muestra "Cinerama⚡"), cualquier persona con cuenta puede opinar, y en preventa **sí se reservan asientos** antes del estreno.
 
 ## Decisión
 
@@ -51,7 +50,7 @@ diseño), cualquier persona con cuenta puede opinar, y en preventa **sí se rese
 - El cine **Cine Star** y su logo corresponden a una cadena real; el autor decidió conservarlos tal como aparecen en el
   diseño. El logo está en `media/cinemas/cine-star.png` y su dirección es referencial. Es una decisión a revisar si el
   repositorio se publica con fines comerciales.
-- El nombre "CineFlash⚡" de la cabecera de la app es el del diseño; el producto sigue llamándose Cinerama hasta que haya marca.
+- La cabecera de la app muestra "Cinerama⚡" y, junto al icono de ubicación, la ciudad con su región ("Chimbote, Áncash").
 - Los pósters del seed son imágenes generadas (título sobre un degradado), no arte real: se reemplazan copiando archivos
   con el mismo nombre a `backend/src/Cinerama.Api/media/posters/`.
 

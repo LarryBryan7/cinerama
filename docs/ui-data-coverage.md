@@ -18,7 +18,7 @@ dispositivo.
 
 | Elemento | Origen | Dónde | Seed |
 |---|---|---|---|
-| "CineFlash⚡" | Fijo en la app | Título del diseño (el producto sigue siendo Cinerama) | — |
+| "Cinerama⚡" | Fijo en la app | Título de la cabecera | — |
 | Ciudad ("Chimbote") | BD | `Cinemas.City` → `GET /cities`. La cabecera muestra solo la ciudad. | Chimbote |
 | Selector de ciudad (chevron) | BD | Mismas filas: una opción por ciudad con cines activos | 1 ciudad, 1 cine |
 | Pestañas Cartelera / Preventa / Próximamente | Calc. | `Movies.ReleaseDate` + `Movies.PreSaleStartsOn` + hoy (RN-41) → `GET /movies?status=` | 8 / 1 / 0 películas (según la fecha de carga) |
