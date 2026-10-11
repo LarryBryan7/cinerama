@@ -1,0 +1,275 @@
+{
+  "source": "https://www.cinerama.com.pe/cartelera_cine/CINERAMA_CHIMBOTE",
+  "snapshotDate": "2026-10-07",
+  "movies": [
+    {
+      "title": "Avengers: doomsday",
+      "synopsis": "Héroes icónicos de tres universos diferentes se encuentran en un curso de colisión mortal y enfrentan una amenaza existencial como nunca antes han visto.",
+      "minutes": 165,
+      "classification": "+14",
+      "genre": "Accion",
+      "releaseDate": "2026-12-16",
+      "preSale": true,
+      "trailerUrl": "https://www.youtube.com/watch?v=lAr_uspgHm8",
+      "previewVideo": null,
+      "director": "anthony russo, joe russo",
+      "cast": "robert downey jr., pedro pascal, chris hemsworth",
+      "distributor": "cinecolor"
+    },
+    {
+      "title": "Verity: la sombra de un engaño",
+      "synopsis": "Lowen ashleigh es contratada como escritora fantasma por jeremy crawford para escribir las novelas de su esposa verity, autora de bestsellers, impedida tras un accidente. lowen descubre las inquietantes verdades de verity mientras reside en casa de los crawford para trabajar.",
+      "minutes": 117,
+      "classification": "+14",
+      "genre": "Thriller",
+      "releaseDate": "2026-10-01",
+      "preSale": false,
+      "trailerUrl": "https://www.youtube.com/watch?v=1McLG8FgNaI",
+      "previewVideo": "posters/verity-la-sombra-de-un-engano.mp4",
+      "director": "michael showalter",
+      "cast": "anne hathaway, dakota johnson, josh hartnett",
+      "distributor": "andes films"
+    },
+    {
+      "title": "Vertigo 2",
+      "synopsis": "Tras perder a su intrépida hermana shiloh, jax, profundamente dolida, emprende una peligrosa escalada con luce, una vieja amiga de shiloh, para honrar su memoria. mientras caminan sobre la cuerda floja por los peligrosos tablones del monte kwan, un aterrador desprendimiento de rocas les deja varados a 1.500 metros de altura. en medio de vértigos, verdades oscuras y giros crueles, jax debe enfrentarse a sus miedos más profundos para luchar por la supervivencia y el final.",
+      "minutes": 100,
+      "classification": "+14",
+      "genre": "Accion",
+      "releaseDate": "2026-10-01",
+      "preSale": false,
+      "trailerUrl": "https://www.youtube.com/watch?v=6ESEtbv0J8M",
+      "previewVideo": null,
+      "director": "michael spierig, peter spierig",
+      "cast": "harriet slater, arsema thomas, tom brittney",
+      "distributor": "bf"
+    },
+    {
+      "title": "Amigo, por ahí no es",
+      "synopsis": "Franco y julián, dos amigos de la infancia, crecieron inmersos en el mundo de los reality shows y el streaming. sin embargo, todo se viene abajo cuando se ven envueltos en una pelea callejera provocada por otros, lo que les hace perder dinero, daña su reputación y pone en peligro su amistad. la situación se complica aún más con la llegada de almendra, una amiga en común que desencadena un caótico triángulo amoroso.",
+      "minutes": 115,
+      "classification": "+14",
+      "genre": "Comedia",
+      "releaseDate": "2026-10-01",
+      "preSale": false,
+      "trailerUrl": "https://www.youtube.com/watch?v=ve282XdTrDM",
+      "previewVideo": null,
+      "director": "gino tassara",
+      "cast": "miranda capurro, jassir yunis y mathias spitzer",
+      "distributor": "cinecolor"
+    },
+    {
+      "title": "La isla olvidada",
+      "synopsis": "Dos amigas se quedan varadas en el místico mundo de nakali, donde su único escape podría costarles su vida compartida de recuerdos.",
+      "minutes": 108,
+      "classification": "Todo espectador",
+      "genre": "Dibujos",
+      "releaseDate": "2026-10-01",
+      "preSale": false,
+      "trailerUrl": "https://www.youtube.com/watch?v=8cI5Bl-v-p8",
+      "previewVideo": null,
+      "director": "joel crawford, januel mercado",
+      "cast": "h.e.r., liza soberano, dave franco",
+      "distributor": "uip"
+    },
+    {
+      "title": "El corazon de la bestia",
+      "synopsis": "Soldado herido de fuerzas especiales y su perro militar luchan por sobrevivir en la naturaleza salvaje de alaska mientras buscan el camino a casa.",
+      "minutes": 101,
+      "classification": "Todo espectador",
+      "genre": "Drama",
+      "releaseDate": "2026-09-24",
+      "preSale": false,
+      "trailerUrl": null,
+      "previewVideo": null,
+      "director": "david ayer",
+      "cast": "brad pitt, j.k. simmons, anna lambe",
+      "distributor": "uip"
+    },
+    {
+      "title": "Avengers: endgame bonus",
+      "synopsis": "Después de los eventos devastadores de 'avengers: infinity war', el universo está en ruinas debido a las acciones de thanos, el titán loco. con la ayuda de los aliados que quedaron, los vengadores deberán reunirse una vez más para intentar deshacer sus acciones y restaurar el orden en el universo de una vez por todas, sin importar cuáles son las consecuencias... cuarta y última entrega de la saga \"vengadores\".",
+      "minutes": 183,
+      "classification": "Todo espectador",
+      "genre": "Accion",
+      "releaseDate": "2026-09-24",
+      "preSale": false,
+      "trailerUrl": null,
+      "previewVideo": null,
+      "director": "anthony russo, joe russo",
+      "cast": "mark ruffalo, robert downey jr, chris evans",
+      "distributor": "cinecolor"
+    },
+    {
+      "title": "Resident evil: noche cero",
+      "synopsis": "Sigue a un desafortunado mensajero encargado de entregar un paquete a un hospital remoto. pronto se encuentra atrapado en medio de una epidemia y debe luchar contra hordas de criaturas mutantes para sobrevivir.",
+      "minutes": 95,
+      "classification": "Todo espectador",
+      "genre": "Terror",
+      "releaseDate": "2026-09-17",
+      "preSale": false,
+      "trailerUrl": null,
+      "previewVideo": null,
+      "director": "zach cregger",
+      "cast": "austin abrams, paul walter hauser, zach cherry",
+      "distributor": "andes films"
+    },
+    {
+      "title": "Coyote vs acme",
+      "synopsis": "Una historia ambientada en el almacén de acme, el fabricante de todo lo que utilizan los personajes de los looney tunes.",
+      "minutes": 104,
+      "classification": "Todo espectador",
+      "genre": "Animado",
+      "releaseDate": "2026-08-27",
+      "preSale": false,
+      "trailerUrl": null,
+      "previewVideo": null,
+      "director": "dave green",
+      "cast": "will forte, lana condor, john cena",
+      "distributor": "bf"
+    }
+  ],
+  "cinemas": [
+    {
+      "name": "Cinerama - Chimbote",
+      "address": "Av. v. raúl h. de la torre, mega plaza chimbote",
+      "region": "Áncash",
+      "latitude": -9.102564,
+      "longitude": -78.55736,
+      "logoUrl": null,
+      "rooms": [
+        {
+          "name": "Sala 1",
+          "rows": 6,
+          "positions": 11,
+          "aisle": 6,
+          "price": 12.0
+        },
+        {
+          "name": "Sala 2",
+          "rows": 10,
+          "positions": 14,
+          "aisle": 7,
+          "price": 15.0
+        },
+        {
+          "name": "Sala 3",
+          "rows": 10,
+          "positions": 21,
+          "aisle": 11,
+          "price": 18.0
+        },
+        {
+          "name": "Sala 4",
+          "rows": 6,
+          "positions": 11,
+          "aisle": 6,
+          "price": 12.0
+        },
+        {
+          "name": "Sala 5",
+          "rows": 8,
+          "positions": 12,
+          "aisle": 6,
+          "price": 14.0
+        },
+        {
+          "name": "Sala 6",
+          "rows": 10,
+          "positions": 14,
+          "aisle": 7,
+          "price": 15.0
+        },
+        {
+          "name": "Sala 7",
+          "rows": 6,
+          "positions": 11,
+          "aisle": 6,
+          "price": 12.0
+        }
+      ],
+      "screenings": [
+        {
+          "movie": "Avengers: doomsday",
+          "times": [
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "18:00",
+            "18:30",
+            "19:00",
+            "19:30",
+            "21:00",
+            "21:30",
+            "22:00",
+            "22:30"
+          ]
+        },
+        {
+          "movie": "Verity: la sombra de un engaño",
+          "times": [
+            "15:00",
+            "17:15",
+            "19:30",
+            "21:45"
+          ]
+        },
+        {
+          "movie": "Vertigo 2",
+          "times": [
+            "16:15",
+            "18:15",
+            "20:15",
+            "22:15"
+          ]
+        },
+        {
+          "movie": "Amigo, por ahí no es",
+          "times": [
+            "21:00"
+          ]
+        },
+        {
+          "movie": "La isla olvidada",
+          "times": [
+            "15:00",
+            "17:00"
+          ]
+        },
+        {
+          "movie": "El corazon de la bestia",
+          "times": [
+            "16:00",
+            "18:00",
+            "20:00",
+            "22:00"
+          ]
+        },
+        {
+          "movie": "Avengers: endgame bonus",
+          "times": [
+            "15:15",
+            "18:30",
+            "21:45"
+          ]
+        },
+        {
+          "movie": "Resident evil: noche cero",
+          "times": [
+            "15:30",
+            "17:30",
+            "19:15",
+            "21:30"
+          ]
+        },
+        {
+          "movie": "Coyote vs acme",
+          "times": [
+            "19:00"
+          ]
+        }
+      ]
+    }
+  ]
+}

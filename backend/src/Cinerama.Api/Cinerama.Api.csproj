@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <UserSecretsId>cinerama-api-dev</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Imágenes del catálogo (pósters, logos). Se publican con la API y se sirven en /media. -->
+    <Content Include="media\**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cinerama.Application\Cinerama.Application.csproj" />
+    <ProjectReference Include="..\Cinerama.Infrastructure\Cinerama.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" />
+  </ItemGroup>
+</Project>
