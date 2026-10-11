@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0e0e10;
+  --color-panel: #1c212b;
+  --color-panel-2: #272d3a;
+  --color-lime: #ccff3e;
+  --color-lime-dark: #93c800;
+  --color-surface: #f4f5f7;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--color-surface); color: #14161c; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+/* El foco del teclado siempre se ve. */
+:focus-visible { outline: 2px solid #4f7cff; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
