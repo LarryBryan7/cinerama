@@ -1,0 +1,69 @@
+# Entorno local de Cinerama: SQL Server + API.
+# Requiere un archivo .env (copia .env.example y reemplaza los valores).
+#
+#   docker compose up --build        # levanta todo
+#   docker compose down -v           # lo detiene y borra los datos
+#
+# Solo para desarrollo local: la API usa la cuenta 'sa' y la cookie de sesión del panel web va sin 'Secure'
+# para poder probar por http://localhost. En un despliegue real se usa un login de mínimo privilegio y HTTPS.
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    # La imagen solo existe para x86. En Apple Silicon corre emulada (Rosetta): funciona, pero más lento.
+    platform: linux/amd64
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?Define MSSQL_SA_PASSWORD en .env}
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q \"SELECT 1\" -b -o /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 40s
+
+  api:
+    build:
+      context: ./backend
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Default: "Server=sqlserver,1433;Database=${CINERAMA_DB_NAME:-Cinerama};User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True"
+      Jwt__SigningKey: ${JWT__SIGNINGKEY:?Define JWT__SIGNINGKEY en .env}
+      Ticket__SigningKey: ${TICKET__SIGNINGKEY:?Define TICKET__SIGNINGKEY en .env}
+      Jwt__Issuer: ${JWT__ISSUER:-cinerama-api}
+      Jwt__Audience: ${JWT__AUDIENCE:-cinerama-clients}
+      Cors__AllowedOrigins: ${CORS__ALLOWEDORIGINS:-http://localhost:5173}
+      # Permiso explícito para los valores inseguros de este archivo: sin él, la API no arranca fuera de Development.
+      Local__AllowInsecureSettings: "true"
+      WebSession__RefreshCookieSecure: "false"
+      Database__MigrateOnStartup: "true"
+      Seed__Enabled: "true"
+      Seed__AdminPassword: ${SEED__ADMINPASSWORD:?Define SEED__ADMINPASSWORD en .env}
+      Seed__CustomerPassword: ${SEED__CUSTOMERPASSWORD:?Define SEED__CUSTOMERPASSWORD en .env}
+      Swagger__Enabled: "true"
+      # Opcional: clave de la API de datos de YouTube para mostrar los comentarios del tráiler. Sin ella esa sección se oculta.
+      YouTube__ApiKey: ${YOUTUBE__APIKEY:-}
+    ports:
+      - "${API_PORT:-8090}:8080"
+    volumes:
+      # Pósters y logos del catálogo. Se montan desde el repositorio: para cambiar una imagen basta reemplazar el archivo
+      # (sin reconstruir la imagen). La ruta que guarda la base es relativa a esta carpeta, por ejemplo posters/marea-alta.jpg.
+      - ./backend/src/Cinerama.Api/media:/app/media:ro
+    healthcheck:
+      # La imagen de ASP.NET no trae curl: se consulta /health con un socket de bash (/dev/tcp es una función de bash, no de sh).
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && printf 'GET /health HTTP/1.0\\r\\n\\r\\n' >&3 && head -n1 <&3 | grep -q ' 200 '"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+volumes:
+  sqlserver-data:

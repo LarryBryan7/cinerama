@@ -1,0 +1,48 @@
+# ── Secretos y configuración local ──────────────────────────
+.env
+.env.*
+!.env.example
+**/appsettings.*.local.json
+**/secrets.json
+
+# ── .NET ────────────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+TestResults/
+coverage*/
+*.coverage
+*.trx
+
+# ── Node / React ────────────────────────────────────────────
+node_modules/
+dist/
+*.log
+.vite/
+
+# ── Flutter / Dart ──────────────────────────────────────────
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+mobile/android/local.properties
+mobile/android/.gradle/
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/flutter_export_environment.sh
+*.iml
+
+# ── Rendimiento (resultados locales de k6 / planes) ─────────
+perf/results/
+
+# ── IDE / SO ────────────────────────────────────────────────
+.idea/
+.vscode/
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Video de demostración con material de terceros: no se versiona
+backend/src/Cinerama.Api/Media/posters/*.mp4
