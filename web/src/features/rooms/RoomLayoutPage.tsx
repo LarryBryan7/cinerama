@@ -103,7 +103,7 @@ function LayoutEditor({ data, roomName, cinemaName, futureShowtimes }: { data: R
         </p>
       )}
 
-      <div className="mb-4 grid max-w-3xl gap-3 sm:grid-cols-4">
+      <div className="mb-4 grid max-w-4xl gap-3 sm:grid-cols-[repeat(3,minmax(0,1fr))_auto]">
         <Field label="Filas" hint="De 1 a 26" error={rows < 1 || rows > MAX_ROWS || !Number.isInteger(rows) ? 'Entre 1 y 26.' : undefined}>
           {(p) => <Input {...p} type="number" inputMode="numeric" value={Number.isNaN(rows) ? '' : rows} disabled={locked} onChange={(e) => setRows(e.target.valueAsNumber)} />}
         </Field>
@@ -113,9 +113,9 @@ function LayoutEditor({ data, roomName, cinemaName, futureShowtimes }: { data: R
         <Field label="Pasillo en la posición" hint="Vacía esa columna">
           {(p) => <Input {...p} inputMode="numeric" value={aisle} disabled={locked} onChange={(e) => setAisle(e.target.value)} />}
         </Field>
-        <div className="flex items-end gap-2">
-          <Button variant="secondary" onClick={applyAisle} disabled={locked}>Hacer pasillo</Button>
-          <Button variant="ghost" onClick={() => setEmpty(new Set())} disabled={locked}>Sin pasillos</Button>
+        <div className="flex flex-wrap items-start gap-2 sm:mt-6">
+          <Button variant="secondary" onClick={applyAisle} disabled={locked} className="whitespace-nowrap">Hacer pasillo</Button>
+          <Button variant="ghost" onClick={() => setEmpty(new Set())} disabled={locked} className="whitespace-nowrap">Sin pasillos</Button>
         </div>
       </div>
 
