@@ -1,0 +1,80 @@
+name: cinerama_mobile
+description: "Cinerama: reserva de entradas de cine (proyecto personal de portafolio)"
+publish_to: 'none'
+version: 0.3.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Estado: BLoC/Cubit (ADR-013)
+  flutter_bloc: ^9.1.1
+  equatable: ^3.0.0
+
+  # Red y sesión
+  dio: ^5.11.1
+  flutter_secure_storage: ^11.2.0   # el refresh token vive en Keychain/Keystore, nunca en SharedPreferences
+
+  # Navegación
+  go_router: ^17.5.0
+
+  # Tiempo real (ADR-016). Es el único cliente SignalR para Dart; no es oficial de Microsoft.
+  signalr_netcore: ^1.4.4
+
+  # Conectividad: la interfaz de red no basta, se confirma con /health (ADR-010)
+  connectivity_plus: ^7.3.2
+
+  # Caché local (ADR-010)
+  drift: ">=2.34.0 <2.35.0"          # 2.35 no resuelve junto con bloc_test bajo Flutter 3.44 (ver ADR-013)
+  drift_flutter: ^0.3.1
+  path_provider: ^2.1.6
+
+  # Ticket
+  qr_flutter: ^4.1.0
+
+  intl: ^0.20.2                      # flutter_localizations fija 0.20.2
+  geolocator: ^14.0.1
+  video_player: ^2.14.1
+  youtube_player_iframe: ^6.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  bloc_test: ^10.0.0
+  mocktail: ^1.0.5
+  drift_dev: ">=2.34.0 <2.35.0"
+  build_runner: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/mock/
+
+  # Inter 3.19: es la misma versión que usa Figma (ejes wght + slnt), así las métricas de línea coinciden.
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/Inter-ExtraLightItalic.otf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Inter-Light.otf
+          weight: 300
+        - asset: assets/fonts/Inter-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.otf
+          weight: 700
